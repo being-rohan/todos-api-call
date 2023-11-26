@@ -10,16 +10,18 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- <h1>TODOS HTTP</h1> -->
+    <div class="container-fluid">
+        <h1>TODOS HTTP</h1>
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <table class="table table-bordered mt-5" id="table-todo">
+                <table class="table table-bordered" id="table-todo">
                     <thead>
                         <th>Sr.No</th>
-                        <th>Title</th>
+                        <th class="rp">Title</th>
                         <!-- <th></th> -->
                         <th class="width">
-                            <select id="statusFilter">
+                            <select id="statusFilter" class="rp2">
                                 <option id="all" value="all">All</option>
                                 <option id="completed" value="true">Completed</option>
                                 <option id="inComplete" value="false">Incomplete</option>

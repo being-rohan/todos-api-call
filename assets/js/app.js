@@ -30,10 +30,10 @@ const genericFun = (methodName, apiUrl) => {
     }
 }
 
-genericFun("GET", todoUrl)
+genericFun("GET", todoUrl)//// gets o
 
 
-const templating = (arr) => {
+const templating = (arr) => {//// tempalting in table /// turner operater used in 42
     let result = ``;
     arr.forEach(ele => {
         result += `<tr>
@@ -44,26 +44,26 @@ const templating = (arr) => {
         
                    `
     });
-    todoBody.innerHTML = result;
+    todoBody.innerHTML = result;//// in todobody saved
 }
 
 
-function filterTodos(status) {
+function filterTodos(status) {/// for all complte and in complete 
     if (status === 'all') {
-        //   renderTodos(todosData);
-        templating(TodArr)
+       
+        templating(TodArr)///asits array 
     } else {
-        const filteredTodos = TodArr.filter(todo => {
+        const filteredTodos = TodArr.filter(todo => { /// filter and return true value
             return todo.completed === (status === 'true');
         });
-        templating(filteredTodos)
-        //   renderTodos();
+        templating(filteredTodos)//// remaining things (incomplete);
+    
     }
 }
 
 const onChangeBtn = (eve) => {
-    filterTodos(eve.target.value)
+    filterTodos(eve.target.value)// getting functions all avlues
 }
 
 
-statusFilter.addEventListener("change", onChangeBtn)
+statusFilter.addEventListener("change", onChangeBtn)// select given id and binded event
