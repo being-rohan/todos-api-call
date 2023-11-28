@@ -39,6 +39,7 @@ const templating = (arr) => {//// tempalting in table /// turner operater used i
         result += `<tr>
                     <td>${ele.userId}</td>
                     <td>${ele.title}</td>
+                    <td>${ele.userId}</td>
                     <td>${ele.completed ? 'Completed' : 'Incomplete'}</td>
                   </tr>
         
@@ -50,14 +51,14 @@ const templating = (arr) => {//// tempalting in table /// turner operater used i
 
 function filterTodos(status) {/// for all complte and in complete 
     if (status === 'all') {
-       
+
         templating(TodArr)///asits array 
     } else {
         const filteredTodos = TodArr.filter(todo => { /// filter and return true value
             return todo.completed === (status === 'true');
         });
         templating(filteredTodos)//// remaining things (incomplete);
-    
+
     }
 }
 
